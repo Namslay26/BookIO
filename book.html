@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="book.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Book.IO</title>
+</head>
+<body>
+    <nav class="navbar bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand">Book.IO</a>
+          <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="#">BestSeller</a>
+            <a class="nav-link disabled">Category</a>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search your book here!" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+          <a href="#" class="nav-link"><img src="./profile.png" alt=""></a>
+        </div>
+      </nav>
+
+
+    <div class="container bookreview">
+      <div class="row">
+        <div class="col">
+          <img class="imagecontainer" src="data:image/jpeg;base64,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">
+        </div>
+        <div class="col">
+          <div class="textbook">
+            <br>
+            <br>
+            <h3>Fundamentals of Data Structures in C</h3> 
+            <h6><i>By Ellis Horowitz</i></h6>
+            <p>Learn about Fundamentals of Data Structures in C language.</p>
+            <div class="stars">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#463C74" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#463C74"  class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#463C74" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#463C74" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            
+            <br>
+            <br>
+            <a href="#"><button class ="btn" style="background-color:#B4D51E;color:white;">Go to Amazon</button></a>
+            <br>
+            <br>
+            <h4>Tags</h4>
+            <div class="row">
+              <div class="col">
+                <button type="button" class="btn btn-primary">
+                  Computer Science <span class="badge text-bg-secondary">4</span>
+                </button>
+              </div>
+              <div class="col">
+                <button type="button" class="btn btn-primary">
+                  Data Structures <span class="badge text-bg-secondary">4</span>
+                </button>
+              </div>
+              <div class="col">
+                <button type="button" class="btn btn-primary">
+                  C Language <span class="badge text-bg-secondary">4</span>
+                </button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <hr>
+    <!--Reviews section-->
+    <div class="container">
+      <h3>Ratings and Reviews</h3>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">
+            "Good book!"
+          </h5>
+          <p class="card-subtitle text-muted">By @username123</p>
+          <div class="stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#463C74" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#463C74"  class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#463C74" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#463C74" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <br>
+          <p class="card-text">
+            I had bought this during my college days and I found this to be very insightful. The way that they had explained difficult and complex concepts in Data Structures in a better way. Would Recommend!
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">
+            "Good book!"
+          </h5>
+          <p class="card-subtitle text-muted">By @username123</p>
+          <div class="stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#463C74" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#463C74"  class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#463C74" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#463C74" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <br>
+          <p class="card-text">
+            I had bought this during my college days and I found this to be very insightful. The way that they had explained difficult and complex concepts in Data Structures in a better way. Would Recommend!
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">
+            "Good book!"
+          </h5>
+          <p class="card-subtitle text-muted">By @username123</p>
+          <div class="stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#463C74" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#463C74"  class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#463C74" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#463C74" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <br>
+          <p class="card-text">
+            I had bought this during my college days and I found this to be very insightful. The way that they had explained difficult and complex concepts in Data Structures in a better way. Would Recommend!
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--Reviews section end-->
+    <div class="footer text-center">
+      <h3>Book.IO</h3>
+      <p>All CopyRight and Terms Reserved</p>
+      <img src="./facebook.png" alt="ig" srcset="">
+      <img src="./instagram.png" alt="mail" srcset="">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+*{
+    font-family: 'Merriweather', serif;
+}
+
+.footer{
+    background-color: #FBF4E2;
+    padding: 100px;
+}
+h1,h3{
+    color: #463C74;
+    font-weight: 700;
+}
