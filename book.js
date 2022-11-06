@@ -24,40 +24,22 @@ function savedata(){
     });
 }
 
-/*const elem = document.createElement("div");
-elem.setAttribute("class","card card-body");
-var reviewTitle;
-var reviewBody;
-*/
-var review1title=document.getElementsByClassName(" card-title review1");
-var review1text=document.getElementsByClassName(" card-text review1");
-var review2title=document.getElementsByClassName("card-title review2");
-var review2text=document.getElementsByClassName("card-text review2");
-var review3title=document.getElementsByClassName("card-title review3");
-var review3text=document.getElementsByClassName("card-text review3");
-firebaseApp.firestore().collection('review').get().then((querysnapshot)=>{
-    querysnapshot.docs.forEach(doc =>{
-        //get the classes with name of "card-title"
-        //running a for loop 
-        //console.log(doc.data())
 
+var titletext=document.getElementsByClassName("card-title");
+var reviewtext=document.getElementsByClassName("card-text");
+var i=0;
+
+db.collection('review').get().then((querySnapshot)=>{
+    querySnapshot.docs.forEach((doc) =>{
+        var title=doc.data().title;
+        var review=doc.data().review;
         
-        review1title.item(0).innerText = doc.data().title;
-        review1text.item(0).innerText=doc.data().review;
-
-        review2title.item(1).innerText = doc.data().title;
-        review2text.item(1).innerText=doc.data().review;
-
-        review3title.item(2).innerText = doc.data().title;
-        review3text.item(2).innerText=doc.data().review;
+        titletext.item(i).innerText=title;
+        reviewtext.item(i).innerText=review;
+        i++;
         
-
-
-
-
-
-        console.log(doc.data().title)
-        console.log(doc.data().ratings);
-        console.log(doc.data().review);
     })
+}).catch((error)=>{
+    console.log(error);
 });
+
