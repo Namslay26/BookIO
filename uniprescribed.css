@@ -1,8 +1,12 @@
-* {
+body {
     font-family: 'Merriweather', serif;
     box-sizing: border-box;
     margin: 0%;
     padding: 0%;
+}
+a {
+    text-decoration: none;
+    color: white;
 }
 .navbar {
     background-color: #fbf4e2;
@@ -31,14 +35,11 @@
     border-color: #463C74;
 }
 .herodiv{
-    background-color: #FBF4E2;
     border-radius: 5%;
-    display: flex;
 }
-.headertext{
-    margin-top: 150px;
-    margin-left:10px;
-    text-align: left;
+.headertext {
+    text-align: center;
+    text-align: center;
 }
 .heroimage{
     flex-direction: row;
@@ -51,13 +52,18 @@ h1,h3{
     color: #463C74;
     font-weight: 700;
 }
+h6 {
+    color: #463C74;
+    font-weight: 500;
+}
 .slide{
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVQAAACUCAMAAAD70yGHAAAAA1BMVEVGPHT39gByAAAASElEQVR4nO3BMQEAAADCoPVPbQ0PoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBnA8UkAAEmGMCJAAAAAElFTkSuQmCC'    );
-    padding: 60px;
+    background-color: white;
+    padding: 10px;
 }
 .footer{
     background-color: #FBF4E2;
     padding: 20px;
+    margin-top: 40px;
 }
 .card{
     box-shadow: 0 4px 30px grey;
