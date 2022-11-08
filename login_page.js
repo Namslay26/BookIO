@@ -16,12 +16,25 @@ function register(){
     }
     auth.createUserWithEmailAndPassword(email, password)
     .then((res)=>{
-        console.log(res.user)
+        db.collection('users')
+    .add({
+        name: name, 
+        uname: uname,
+        email: email
+    })
+    .then((docRef)=>{
+        console.log("Document written with ID: ", docRef.id)
+        alert("Request submitted")
+    })
+    .catch((error)=>{
+        console.log(error)
+    });
     })
     .catch((err)=>{
         console.log(err.code)
         console.log(err.message)
     })
+
 
 }
 
