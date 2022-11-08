@@ -1,3 +1,4 @@
+//import {getEmail} from'./profilepage';
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 const db = firebaseApp.firestore();
@@ -5,7 +6,10 @@ const auth = firebaseApp.auth();
 
 function register(){
     const name = document.getElementById('name').value
-    const uname = document.getElementById('username').value
+    const age = document.getElementById('age').value
+    const phno = document.getElementById('phonenumber').value
+    const category = document.getElementById('domain').value
+    const collegename = document.getElementById('college').value
     const email = document.getElementById('emailcreate').value
     const password = document.getElementById('passwordcreate').value
     const confirm_password = document.getElementById('confirm_password').value
@@ -16,10 +20,14 @@ function register(){
     }
     auth.createUserWithEmailAndPassword(email, password)
     .then((res)=>{
+        console.log(res.user)
         db.collection('users')
     .add({
         name: name, 
-        uname: uname,
+        age: age, 
+        phno: phno,
+        category:category,
+        collegename: collegename,
         email: email
     })
     .then((docRef)=>{
@@ -34,9 +42,15 @@ function register(){
         console.log(err.code)
         console.log(err.message)
     })
+    .catch((err)=>{
+        alert(err.message)
+        console.log(err.code)
+        console.log(err.message)
+    })
 
 
 }
+
 
 const login=()=>{
     const emaillogin = document.getElementById('emaillogin').value
@@ -51,4 +65,7 @@ const login=()=>{
         console.log(err.code)
         console.log(err.message)
     })
+
+
 }
+
